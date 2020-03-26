@@ -1,7 +1,8 @@
 #include<iostream>//std::cin,std::cout
 #include<fstream>//ifstream
 #include<array>//array[]
-#include<cstdlib>//random
+#include<stdlib.h>//rand,srand
+#include <time.h>//time
 
 using namespace std;
 #define SIZE 9          // Max dimension size for a Sudoku board.
@@ -39,18 +40,20 @@ void pretty_print( const board_t &b )
     // Last row requires a different line separation.
     std::cout << "  +-------+-------+-------+\n";
 }
-void loadingBoard(const board_t &b, board_t &b_game, int i){
+void loadingBoard(const board_t &b,  board_t &b_game){
 	for (short r{0}; r < SIZE; ++r)//copy b to b_game
 	{
-		for (short c = 0; c < SIZE; ++c)
-		{
-			b_game[r][c] = b[r][c];
-		}
+		for (short c = 0; c < SIZE; ++c){
+          b_game[r][c] = b[r][c];
+        }
 	}
-	for (short k{0}; k < SIZE; ++k)
+    srand(time(NULL));
+	int i,j;
+    for (short k{0}; k < SIZE; ++k)
 	{
 		i = rand() % 9;
-		b_game[k][i] = EMPTY;
+        j = rand() % 9;
+		b_game[j][i] = EMPTY;
 	}
 
 }
@@ -121,11 +124,11 @@ int main(void){
         {
             { 6, 2, 1, 9, 5, 7, 3, 4, 8 },
             { 2, 7, 4, 1, 9, 8, 6, 3, 5 },
-            { 1, 8, 3, 4, 2, 19, 5, 6, 7 },
+            { 1, 8, 3, 4, 2, 19, 5, 6, 7},
             { 8, 9, 7, 6, 1, 5, 4, 2, 3 },
             { 4, 6, 8, 5, 3, 2, 7, 9, 1 },
             { 5, 4, 6, 7, 8, 3, 9, 1, 2 },
-            { 7, -3, 9, 2, 4, 1, 8, 5, 6 },
+            { 7, 3, 9, 2, 4, 1, 8, 5, 6 },
             { 9, 1, 5, 3, 7, 6, 2, 8, 4 },
             { 3, 5, 2, 8, 6, 4, 1, 7, 9 }
         },
@@ -178,36 +181,45 @@ int main(void){
             { 3, 4, 5, 2, 8, 6, 1, 7, 9 }
         }
     };
-    board_t board_game;
-    int i; //random
-    short x,y,value; 
-    short controller;
+
     cout << "\n=======! SUDOKU GAME !======\n";
-    i = rand() % 10;
-    loadingBoard( boards[i], board_game, i);
+    
+    srand(time( NULL ));
+    auto i = rand() % 10;
+    
+    board_t board_game;
+    loadingBoard( boards[i], board_game);
+    
+    short controller{1};
     while(controller != 0){
         pretty_print( board_game );
+
     	cout <<"\n===========================\n";
 		cout << "        < OPTIONS >      \n"
-	    	 << "      0-Exit"
-	    	 << "   1-Play\n"
+	    	 << "      0-Exit    1-Play   \n"
 	    	 << "       >YOUR CHOSE:";
 	    cin >> controller;
+
 	    if (controller == 1)
 	    {
+            short x,y; 
 	     	cout << ">Selection the row:";
 	     	cin >> x;
 	     	cout << ">Selection the collumn:";
 	     	cin >> y;
+
 	     	if(board_game[x][y] == EMPTY){
-	     		cout << ">Selection the value:";
+	     		short value;
+                cout << ">Selection the value:";
 	     		cin >> value;
 	     		board_game[x][y] = value;
 	     	}
+
 	     	else cout << "\n>That is not possible!\n";
 	    }
 
 	}
+
 	cout <<"\n=======! END GAME !========\n";
 	return 0;
 }
