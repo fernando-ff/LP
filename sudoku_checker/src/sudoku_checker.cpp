@@ -1,7 +1,5 @@
 /*!
  * This program verifies whether a given Sudoku board is valid or not.
- * @author Selan R. Santos
- * @date March 4th, 2020.
  */
 #include <iostream>
 using std::cout;
