@@ -1,10 +1,15 @@
-#include<iostream>//std::cin,std::cout
-#include<fstream>//ifstream
-#include<array>//array[]
+#include <iostream>
+using std::cout;
+using std::endl;
+#include <algorithm>
+using std::fill_n;
+#include <vector>
+using std::vector;
+#include <iterator>
+using std::back_inserter;
 #include<stdlib.h>//rand,srand
 #include <time.h>//time
 
-using namespace std;
 #define SIZE 9          // Max dimension size for a Sudoku board.
 #define EMPTY short(0) // The number representing an empty space.
 
@@ -57,6 +62,18 @@ void loadingBoard(const board_t &b,  board_t &b_game){
 	}
 
 }
+
+/// Check whether the Sudoku board `b` passed as argument is valid or not.
+bool is_valid( board_t b, board_t b_game, short row, short column )
+{
+    if (b_game[row][column] == b[row][column])  return true;
+    else{
+        b_game[row][column] = EMPTY;
+        return false;
+    }
+    
+    return true; // This is just a stub. Replace it as needed.
+}
 int main(void){
 	board_t boards[ ]
     {
@@ -95,97 +112,14 @@ int main(void){
             { 9, 6, 1, 5, 3, 7, 2, 8, 4 },
             { 2, 8, 7, 4, 1, 9, 6, 3, 5 },
             { 3, 4, 5, 2, 8, 6, 1, 7, 9 }
-        },
-        // board 4: problem
-        {
-            { 6, 2, 1, 9, 5, 7, 3, 4, 8 },
-            { 2, 7, 4, 1, 9, 8, 6, 3, 5 },
-            { 1, 8, 3, 4, 2, 9, 5, 6, 7 },
-            { 8, 9, 7, 6, 1, 5, 4, 2, 3 },
-            { 4, 6, 8, 5, 3, 2, 7, 9, 1 },
-            { 5, 4, 6, 7, 8, 3, 9, 1, 2 },
-            { 7, 3, 9, 2, 4, 1, 8, 5, 6 },
-            { 9, 1, 5, 3, 7, 6, 2, 8, 4 },
-            { 3, 5, 2, 8, 6, 4, 1, 7, 9 }
-        },
-        // board 5: problem
-        {
-            { 6, 2, 1, 9, 5, 7, 3, 4, 8 },
-            { 2, 7, 4, 1, 9, 8, 6, 3, 5 },
-            { 1, 8, 3, 4, 2, 9, 5, 6, 7 },
-            { 8, 9, 7, 6, 1, 5, 4, 2, 3 },
-            { 4, 6, 8, 5, 3, 2, 5, 9, 1 },
-            { 5, 4, 6, 7, 8, 3, 9, 1, 2 },
-            { 7, 3, 9, 2, 4, 1, 8, 5, 6 },
-            { 9, 3, 5, 3, 7, 6, 2, 8, 4 },
-            { 3, 5, 2, 8, 6, 4, 1, 7, 9 }
-        },
-        // board 6: Problem
-        {
-            { 6, 2, 1, 9, 5, 7, 3, 4, 8 },
-            { 2, 7, 4, 1, 9, 8, 6, 3, 5 },
-            { 1, 8, 3, 4, 2, 19, 5, 6, 7},
-            { 8, 9, 7, 6, 1, 5, 4, 2, 3 },
-            { 4, 6, 8, 5, 3, 2, 7, 9, 1 },
-            { 5, 4, 6, 7, 8, 3, 9, 1, 2 },
-            { 7, 3, 9, 2, 4, 1, 8, 5, 6 },
-            { 9, 1, 5, 3, 7, 6, 2, 8, 4 },
-            { 3, 5, 2, 8, 6, 4, 1, 7, 9 }
-        },
-        // board 7: Problem
-        {
-            { 6, 2, 1, 9, 5, 7, 3, 4, 8 },
-            { 2, 7, 4, 1, 9, 8, 6, 3, 5 },
-            { 1, 8, 3, 4, 2, 9, 5, 6, 7 },
-            { 8, 9, 7, 6, 1, 5, 4, 2, 3 },
-            { 4, 6, 8, 5, 3, 2, 7, 9, 1 },
-            { 5, 4, 6, 7, 8, 3, 9, 1, 2 },
-            { 7, 3, 9, 2, 4, 1, 0, 5, 6 },
-            { 9, 1, 5, 3, 7, 6, 2, 8, 4 },
-            { 3, 5, 2, 8, 6, 4, 1, 7, 9 }
-        },
-        // board 8: Problem
-        {
-            { 6, 2, 1, 9, 5, 7, 3, 4, 8 },
-            { 2, 7, 4, 1, 9, 8, 6, 3, 5 },
-            { 1, 8, 3, 4, 2, 9, 5, 6, 7 },
-            { 8, 9, 7, 3, 1, 5, 4, 2, 3 },
-            { 4, 6, 8, 5, 3, 2, 7, 9, 1 },
-            { 5, 4, 6, 7, 8, 6, 9, 1, 2 },
-            { 7, 3, 9, 2, 4, 1, 8, 5, 6 },
-            { 9, 1, 5, 3, 7, 6, 2, 8, 4 },
-            { 3, 5, 2, 8, 6, 4, 1, 7, 9 }
-        },
-        // board 9: Problem
-        {
-            { 1, 6, 2, 8, 5, 4, 7, 9, 3 },
-            { 5, 3, 4, 1, 2, 6, 9, 7, 8 },
-            { 7, 8, 9, 6, 4, 5, 3, 2, 1 },
-            { 4, 7, 5, 3, 1, 9, 2, 8, 6 },
-            { 9, 1, 3, 5, 8, 7, 6, 4, 2 },
-            { 6, 2, 8, 7, 9, 1, 4, 3, 5 },
-            { 3, 5, 6, 4, 7, 2, 8, 1, 9 },
-            { 2, 4, 1, 9, 3, 8, 5, 6, 7 },
-            { 8, 9, 7, 2, 6, 3, 1, 5, 4 }
-        },
-        // board 10: Problem
-        {
-            { 5, 3, 4, 6, 7, 8, 9, 1, 2 },
-            { 6, 7, 2, 1, 9, 5, 3, 4, 8 },
-            { 1, 9, 8, 3, 4, 2, 5, 6, 7 },
-            { 8, 9, 5, 7, 6, 1, 4, 2, 3 },
-            { 4, 2, 6, 8, 5, 3, 7, 9, 1 },
-            { 7, 1, 3, 9, 2, 4, 8, 5, 6 },
-            { 9, 6, 1, 5, 3, 7, 2, 8, 4 },
-            { 2, 8, 7, 4, 1, 9, 6, 3, 5 },
-            { 3, 4, 5, 2, 8, 6, 1, 7, 9 }
         }
+        
     };
 
     cout << "\n=======! SUDOKU GAME !======\n";
     
     srand(time( NULL ));
-    auto i = rand() % 10;
+    auto i = rand() % 3;
     
     board_t board_game;
     loadingBoard( boards[i], board_game);
@@ -194,32 +128,36 @@ int main(void){
     while(controller != 0){
         pretty_print( board_game );
 
-    	cout <<"\n===========================\n";
-		cout << "        < OPTIONS >      \n"
+    	std::cout <<"\n===========================\n";
+		std::cout << "        < OPTIONS >      \n"
 	    	 << "      0-Exit    1-Play   \n"
 	    	 << "       >YOUR CHOSE:";
-	    cin >> controller;
+	    std::cin >> controller;
 
 	    if (controller == 1)
 	    {
-            short x,y; 
-	     	cout << ">Selection the row:";
-	     	cin >> x;
-	     	cout << ">Selection the collumn:";
-	     	cin >> y;
+            short row,column; 
+	     	std::cout << ">Selection the row:";
+	     	std::cin >> row;
+	     	std::cout << ">Selection the collumn:";
+	     	std::cin >> column;
 
-	     	if(board_game[x][y] == EMPTY){
+	     	if(board_game[row][column] == EMPTY){//
 	     		short value;
-                cout << ">Selection the value:";
-	     		cin >> value;
-	     		board_game[x][y] = value;
+                std::cout << ">Selection the value:";
+	     		std::cin >> value;
+                board_game[row][column] = value;
+                while( is_valid( boards[i],board_game, row, column ) == false){
+                    std::cout << "Invalid!\nInsert a new value:";
+                    std::cin >> value;
+                    board_game[row][column] = value;
+                }
 	     	}
-
-	     	else cout << "\n>That is not possible!\n";
+	     	else std::cout << "\n>That is not possible!\n";
 	    }
 
 	}
 
-	cout <<"\n=======! END GAME !========\n";
+	std::cout <<"\n=======! END GAME !========\n";
 	return 0;
 }
