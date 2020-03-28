@@ -10,7 +10,7 @@ using std::back_inserter;
 #include<stdlib.h>//rand,srand
 #include <time.h>//time
 
-#include "../include/sudoku_gamer_lib.h"
+#include "../include/sudoku.h"
 
 #define SIZE 9          // Max dimension size for a Sudoku board.
 #define EMPTY short(0) // The number representing an empty space.
@@ -113,4 +113,7 @@ void selection(board_t b, short row, short column){
     }
     // Last row requires a different line separation.
     std::cout << "  +-------+-------+-------+\n";
+}
+void show( board_t b, board_t b_game, short row, short column ){
+	b_game[row][column] = b[row][column];
 }

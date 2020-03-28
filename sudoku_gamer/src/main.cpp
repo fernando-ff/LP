@@ -15,7 +15,7 @@ using std::back_inserter;
 #include<stdlib.h>//rand,srand
 #include <time.h>//time
 
-#include "../include/sudoku_gamer_lib.h"
+#include "../include/sudoku.h"
 
 #define SIZE 9          // Max dimension size for a Sudoku board.
 #define EMPTY short(0) // The number representing an empty space.
@@ -78,6 +78,8 @@ int main(void){
 
     cout << "\n=======! SUDOKU GAME !======\n";
     
+    short row,column;
+
     srand(time( NULL ));
     auto i = rand() % 4;
     
@@ -91,12 +93,12 @@ int main(void){
     	std::cout <<"\n===========================\n";
 		std::cout << "        < OPTIONS >      \n"
 	    	 << "      0-Exit    1-Play   \n"
+             << "      2-Show\n"
 	    	 << "       >YOUR CHOSE:";
 	    std::cin >> controller;
 
 	    if (controller == 1)
-	    {
-            short row,column; 
+	    { 
 	     	std::cout << ">Selection the row:";
 	     	std::cin >> row;
 	     	std::cout << ">Selection the collumn:";
@@ -115,6 +117,14 @@ int main(void){
 	     	}
 	     	else std::cout << "\n>That is not possible!\n";
 	    }
+        if (controller == 2)
+        {
+            std::cout << ">Selection the row:";
+            std::cin >> row;
+            std::cout << ">Selection the collumn:";
+            std::cin >> column;
+            show( boards[i], board_game,row,column);
+        }
 
 	}
 
