@@ -58,7 +58,7 @@ void loadingBoard(const board_t &b,  board_t &b_game){
         }
 	}
 	
-    for (short k{0}; k < SIZE; ++k)
+    for (short k{0}; k < SIZE*5; ++k)
 	{
 		i = rand() % 9;
         j = rand() % 9;
