@@ -1,3 +1,8 @@
+/* Versão interativa do Sudoku
+ * Desafio proposto na disciplina LP1 na UFRN
+ * Autor:https://github.com/fernando-ff
+ * Finalizado em: ?
+*/
 #include <iostream>
 using std::cout;
 using std::endl;
@@ -10,70 +15,14 @@ using std::back_inserter;
 #include<stdlib.h>//rand,srand
 #include <time.h>//time
 
+#include "../include/sudoku_gamer_lib.h"
+
 #define SIZE 9          // Max dimension size for a Sudoku board.
 #define EMPTY short(0) // The number representing an empty space.
 
-
-// This is just an alias to make the code more "clean".
 typedef short board_t[SIZE][SIZE];
 
-/// Prints out a pretty-print version of the Sudoku board.
-void pretty_print( const board_t &b )
-{
-    // First row requires a different line separation.
-    std::cout << "    0 1 2   3 4 5   6 7 8  \n";
-    std::cout << "  +-------+-------+-------+\n";
-    // pretty_print each row.
-    for ( short r{0} ; r < SIZE ; ++r )
-    {
-        // pretty_print a line separation before rows 0, 3, 6.
-        // Traverse all number on this row.
-        std::cout << r << " | "; // At the beginning of each row pretty_print a `|`.
-        for ( short c{0} ; c < SIZE ; ++c )
-        {
-            // Pretty printing: if value is zero, pretty_print a blank space.
-            if ( b[r][c] == EMPTY ) std::cout << "  ";
-            else std::cout << b[r][c] << " ";
-            // Add a separation space every 3 numbers.
-            if ( (c+1) % 3 == 0 )  std::cout << "| ";
-        }
-        // Internal separation of internal "squares"
-        if ( r==2 or r==5 )
-            std::cout << "\n  |-------+-------+-------|"; // Internal line separation.
-        std::cout << "\n";
-    }
-    // Last row requires a different line separation.
-    std::cout << "  +-------+-------+-------+\n";
-}
-void loadingBoard(const board_t &b,  board_t &b_game){
-	for (short r{0}; r < SIZE; ++r)//copy b to b_game
-	{
-		for (short c = 0; c < SIZE; ++c){
-          b_game[r][c] = b[r][c];
-        }
-	}
-    srand(time(NULL));
-	int i,j;
-    for (short k{0}; k < SIZE; ++k)
-	{
-		i = rand() % 9;
-        j = rand() % 9;
-		b_game[j][i] = EMPTY;
-	}
 
-}
-
-/// Check whether the Sudoku board `b` passed as argument is valid or not.
-bool is_valid( board_t b, board_t b_game, short row, short column )
-{
-    if (b_game[row][column] == b[row][column])  return true;
-    else{
-        b_game[row][column] = EMPTY;
-        return false;
-    }
-    
-    return true; // This is just a stub. Replace it as needed.
-}
 int main(void){
 	board_t boards[ ]
     {
@@ -141,7 +90,7 @@ int main(void){
 	     	std::cin >> row;
 	     	std::cout << ">Selection the collumn:";
 	     	std::cin >> column;
-
+            selection( board_game, row, column );
 	     	if(board_game[row][column] == EMPTY){//
 	     		short value;
                 std::cout << ">Selection the value:";
