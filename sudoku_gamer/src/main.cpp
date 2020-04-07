@@ -123,11 +123,12 @@ int main(void){
             std::cin >> row;
             std::cout << ">Selection the collumn:";
             std::cin >> column;
-            show( boards[i], board_game,row,column);
+            if(board_game[row][column] == EMPTY)    show( boards[i], board_game,row,column);
+            else   std::cout <<"That is not possible!\n";
+            
         }
 
-	}
-
+    }
 	std::cout <<"\n=======! END GAME !========\n";
 	return 0;
 }
