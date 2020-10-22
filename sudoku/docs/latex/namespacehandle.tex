@@ -1,0 +1,100 @@
+\hypertarget{namespacehandle}{}\doxysection{handle Namespace Reference}
+\label{namespacehandle}\index{handle@{handle}}
+
+
+Functions used in the update step.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{namespacehandle_a8ba7e6026ae2b806052a542ae193a544}{board}} (board\+\_\+t \&b, value\+\_\+t \&v, row\+\_\+t \&r, column\+\_\+t \&c)
+\begin{DoxyCompactList}\small\item\em Will insert a value in the square selected in the board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacehandle_a79fdbeffb5e390409662d4e0b37c82a4}{remove}} (board\+\_\+t \&b, value\+\_\+t v, row\+\_\+t r, column\+\_\+t c)
+\begin{DoxyCompactList}\small\item\em Will Remove a value in the square selected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacehandle_ab30e3fba3ef2ad65a3001e937aee5cb7}{loading}} (const board\+\_\+t \&b, board\+\_\+t \&b\+\_\+backup)
+\begin{DoxyCompactList}\small\item\em Will load the board values to backup. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacehandle_a93ffd352c80f33073cc45a8e1e8f3b9f}{reading\+\_\+boards}} (board\+\_\+t b\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Will read the boards in a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions used in the update step. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacehandle_a8ba7e6026ae2b806052a542ae193a544}\label{namespacehandle_a8ba7e6026ae2b806052a542ae193a544}} 
+\index{handle@{handle}!board@{board}}
+\index{board@{board}!handle@{handle}}
+\doxysubsubsection{\texorpdfstring{board()}{board()}}
+{\footnotesize\ttfamily std\+::string handle\+::board (\begin{DoxyParamCaption}\item[{board\+\_\+t \&}]{b,  }\item[{value\+\_\+t \&}]{v,  }\item[{row\+\_\+t \&}]{r,  }\item[{column\+\_\+t \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Will insert a value in the square selected in the board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Board that will be insert the value \\
+\hline
+{\em v} & Value that will be insert \\
+\hline
+{\em r} & Row that will select \\
+\hline
+{\em c} & Column that will select \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacehandle_ab30e3fba3ef2ad65a3001e937aee5cb7}\label{namespacehandle_ab30e3fba3ef2ad65a3001e937aee5cb7}} 
+\index{handle@{handle}!loading@{loading}}
+\index{loading@{loading}!handle@{handle}}
+\doxysubsubsection{\texorpdfstring{loading()}{loading()}}
+{\footnotesize\ttfamily void handle\+::loading (\begin{DoxyParamCaption}\item[{const board\+\_\+t \&}]{b,  }\item[{board\+\_\+t \&}]{b\+\_\+backup }\end{DoxyParamCaption})}
+
+
+
+Will load the board values to backup. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Board with the values \\
+\hline
+{\em b\+\_\+backup} & Board backup \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacehandle_a93ffd352c80f33073cc45a8e1e8f3b9f}\label{namespacehandle_a93ffd352c80f33073cc45a8e1e8f3b9f}} 
+\index{handle@{handle}!reading\_boards@{reading\_boards}}
+\index{reading\_boards@{reading\_boards}!handle@{handle}}
+\doxysubsubsection{\texorpdfstring{reading\_boards()}{reading\_boards()}}
+{\footnotesize\ttfamily void handle\+::reading\+\_\+boards (\begin{DoxyParamCaption}\item[{board\+\_\+t}]{b\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Will read the boards in a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Boards array that will stores the boards. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacehandle_a79fdbeffb5e390409662d4e0b37c82a4}\label{namespacehandle_a79fdbeffb5e390409662d4e0b37c82a4}} 
+\index{handle@{handle}!remove@{remove}}
+\index{remove@{remove}!handle@{handle}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void handle\+::remove (\begin{DoxyParamCaption}\item[{board\+\_\+t \&}]{b,  }\item[{value\+\_\+t}]{v,  }\item[{row\+\_\+t}]{r,  }\item[{column\+\_\+t}]{c }\end{DoxyParamCaption})}
+
+
+
+Will Remove a value in the square selected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Board that will be remove the value \\
+\hline
+{\em v} & Value that will be remove \\
+\hline
+{\em r} & Row that will remove \\
+\hline
+{\em c} & Column that will remove \\
+\hline
+\end{DoxyParams}

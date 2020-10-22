@@ -1,0 +1,21 @@
+\hypertarget{test__manager_8cpp}{}\doxysection{/home/fernando/code/sudoku/lib/test\+\_\+manager.cpp File Reference}
+\label{test__manager_8cpp}\index{/home/fernando/code/sudoku/lib/test\_manager.cpp@{/home/fernando/code/sudoku/lib/test\_manager.cpp}}
+
+
+Implementation of the \mbox{\hyperlink{classTestManager}{Test\+Manager}} class.  
+
+
+{\ttfamily \#include \char`\"{}test\+\_\+manager.\+h\char`\"{}}\newline
+Include dependency graph for test\+\_\+manager.\+cpp\+:
+% FIG 0
+
+
+\doxysubsection{Detailed Description}
+Implementation of the \mbox{\hyperlink{classTestManager}{Test\+Manager}} class. 
+
+\begin{DoxyDate}{Date}
+November 15th, 2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Selan R. dos Santos 
+\end{DoxyAuthor}

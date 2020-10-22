@@ -1,0 +1,9 @@
+digraph "/home/fernando/code/sudoku/lib/test_manager.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="/home/fernando/code\l/sudoku/lib/test_manager.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Definition of the TestManager class."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="/home/fernando/code\l/sudoku/lib/test_manager.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$test__manager_8cpp.html",tooltip="Implementation of the TestManager class."];
+}

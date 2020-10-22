@@ -1,0 +1,128 @@
+\hypertarget{namespaceprint}{}\doxysection{print Namespace Reference}
+\label{namespaceprint}\index{print@{print}}
+
+
+Functions used in the render step.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceprint_a68b518719fc3ce11b064bfdd89c61731}\label{namespaceprint_a68b518719fc3ce11b064bfdd89c61731}} 
+void {\bfseries intro} ()
+\item 
+void \mbox{\hyperlink{namespaceprint_a5c65905ec7665896db91a9ae9125528f}{digits}} (const board\+\_\+t \&b)
+\begin{DoxyCompactList}\small\item\em Render the digits that can be used. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprint_a03341108c1329af7a7680854f538ee46}{main}} (const board\+\_\+t \&b, message\+\_\+t \&m)
+\begin{DoxyCompactList}\small\item\em Render the main screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprint_a8818ea3ba5ae91f7da174d818ecc2a10}{help}} (const board\+\_\+t \&b, message\+\_\+t \&m)
+\begin{DoxyCompactList}\small\item\em Render the instructions to play the game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceprint_ad68979ae038418b8720ba52e7cd46318}\label{namespaceprint_ad68979ae038418b8720ba52e7cd46318}} 
+void {\bfseries help} ()
+\item 
+void \mbox{\hyperlink{namespaceprint_ab144c5a4f4f692b0bdc68b335cb4aacc}{action}} (const board\+\_\+t \&b, digits\+\_\+t d, message\+\_\+t m, check\+\_\+t \&chk)
+\begin{DoxyCompactList}\small\item\em Render the Action Screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprint_a1a8b1a4728ed9ee94b7206ff86047bbf}{action}} (const board\+\_\+t \&b, digits\+\_\+t d, message\+\_\+t m, check\+\_\+t \&chk, row\+\_\+t row, column\+\_\+t c)
+\begin{DoxyCompactList}\small\item\em Render the Action Screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceprint_afe3ccd33405c9e3338817dd9c891d958}\label{namespaceprint_afe3ccd33405c9e3338817dd9c891d958}} 
+void {\bfseries check} (const board\+\_\+t \&b, const board\+\_\+t \&b\+\_\+backup)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions used in the render step. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceprint_ab144c5a4f4f692b0bdc68b335cb4aacc}\label{namespaceprint_ab144c5a4f4f692b0bdc68b335cb4aacc}} 
+\index{print@{print}!action@{action}}
+\index{action@{action}!print@{print}}
+\doxysubsubsection{\texorpdfstring{action()}{action()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void print\+::action (\begin{DoxyParamCaption}\item[{const board\+\_\+t \&}]{b,  }\item[{digits\+\_\+t}]{d,  }\item[{message\+\_\+t}]{m,  }\item[{check\+\_\+t \&}]{chk }\end{DoxyParamCaption})}
+
+
+
+Render the Action Screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Board that will be render \\
+\hline
+{\em m} & Message that will be render \\
+\hline
+{\em chk} & Checks that will be render \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceprint_a1a8b1a4728ed9ee94b7206ff86047bbf}\label{namespaceprint_a1a8b1a4728ed9ee94b7206ff86047bbf}} 
+\index{print@{print}!action@{action}}
+\index{action@{action}!print@{print}}
+\doxysubsubsection{\texorpdfstring{action()}{action()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void print\+::action (\begin{DoxyParamCaption}\item[{const board\+\_\+t \&}]{b,  }\item[{digits\+\_\+t}]{d,  }\item[{message\+\_\+t}]{m,  }\item[{check\+\_\+t \&}]{chk,  }\item[{row\+\_\+t}]{row,  }\item[{column\+\_\+t}]{c }\end{DoxyParamCaption})}
+
+
+
+Render the Action Screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Board that will be render \\
+\hline
+{\em m} & Message that will be render \\
+\hline
+{\em chk} & Checks that will be render \\
+\hline
+{\em row} & Row that will be rendered with an arrow next to it \\
+\hline
+{\em c} & Column that will be render with a arrow above it \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceprint_a5c65905ec7665896db91a9ae9125528f}\label{namespaceprint_a5c65905ec7665896db91a9ae9125528f}} 
+\index{print@{print}!digits@{digits}}
+\index{digits@{digits}!print@{print}}
+\doxysubsubsection{\texorpdfstring{digits()}{digits()}}
+{\footnotesize\ttfamily void print\+::digits (\begin{DoxyParamCaption}\item[{const board\+\_\+t \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Render the digits that can be used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceprint_a8818ea3ba5ae91f7da174d818ecc2a10}\label{namespaceprint_a8818ea3ba5ae91f7da174d818ecc2a10}} 
+\index{print@{print}!help@{help}}
+\index{help@{help}!print@{print}}
+\doxysubsubsection{\texorpdfstring{help()}{help()}}
+{\footnotesize\ttfamily void print\+::help (\begin{DoxyParamCaption}\item[{const board\+\_\+t \&}]{b,  }\item[{message\+\_\+t \&}]{m }\end{DoxyParamCaption})}
+
+
+
+Render the instructions to play the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Board that will be render with the instructions \\
+\hline
+{\em m} & Message that will be render with the instructions \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceprint_a03341108c1329af7a7680854f538ee46}\label{namespaceprint_a03341108c1329af7a7680854f538ee46}} 
+\index{print@{print}!main@{main}}
+\index{main@{main}!print@{print}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily void print\+::main (\begin{DoxyParamCaption}\item[{const board\+\_\+t \&}]{b,  }\item[{message\+\_\+t \&}]{m }\end{DoxyParamCaption})}
+
+
+
+Render the main screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & board that will be render \\
+\hline
+{\em m} & Messate that will be render \\
+\hline
+\end{DoxyParams}

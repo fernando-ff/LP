@@ -1,0 +1,59 @@
+\hypertarget{classTestManager}{}\doxysection{Test\+Manager Class Reference}
+\label{classTestManager}\index{TestManager@{TestManager}}
+
+
+Implements a simple test manager.  
+
+
+
+
+{\ttfamily \#include $<$test\+\_\+manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTestManager_aabfa6d8140f85403d5967c15238c5ca2}\label{classTestManager_aabfa6d8140f85403d5967c15238c5ca2}} 
+\mbox{\hyperlink{classTestManager_aabfa6d8140f85403d5967c15238c5ca2}{Test\+Manager}} (const std\+::string suite\+\_\+name=\char`\"{}Default\char`\"{})
+\begin{DoxyCompactList}\small\item\em Default constructor that may take the test suite name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTestManager_ab1340d7021df93ed4c295a392f3f4280}\label{classTestManager_ab1340d7021df93ed4c295a392f3f4280}} 
+void \mbox{\hyperlink{classTestManager_ab1340d7021df93ed4c295a392f3f4280}{record}} (const std\+::string \&key\+\_\+name, const std\+::string \&msg)
+\begin{DoxyCompactList}\small\item\em Registers a test with this suite. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTestManager_a9375419c7402cce90ced459029eb7a44}\label{classTestManager_a9375419c7402cce90ced459029eb7a44}} 
+void {\bfseries enable} (const std\+::string \&key\+\_\+name, bool value=true)
+\item 
+void \mbox{\hyperlink{classTestManager_ad6008adec3587a76d1e356d1519f3c89}{result}} (const std\+::string \&key, bool value, int line)
+\begin{DoxyCompactList}\small\item\em Updates the test result. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTestManager_a24335167da36936bc6cf295d1b6d0c1e}\label{classTestManager_a24335167da36936bc6cf295d1b6d0c1e}} 
+void \mbox{\hyperlink{classTestManager_a24335167da36936bc6cf295d1b6d0c1e}{summary}} (void) const
+\begin{DoxyCompactList}\small\item\em Shows the test suite results. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements a simple test manager. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTestManager_ad6008adec3587a76d1e356d1519f3c89}\label{classTestManager_ad6008adec3587a76d1e356d1519f3c89}} 
+\index{TestManager@{TestManager}!result@{result}}
+\index{result@{result}!TestManager@{TestManager}}
+\doxysubsubsection{\texorpdfstring{result()}{result()}}
+{\footnotesize\ttfamily void Test\+Manager\+::result (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{bool}]{value,  }\item[{int}]{line }\end{DoxyParamCaption})}
+
+
+
+Updates the test result. 
+
+Updates the test result database. 
+\begin{DoxyParams}{Parameters}
+{\em key} & The unique test key, which is the test\textquotesingle{}s name. \\
+\hline
+{\em value} & The result of the test, that might either be {\ttfamily true} or {\ttfamily false}. \\
+\hline
+{\em line} & The line number in the source code, where the teste happened. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/fernando/code/sudoku/lib/\mbox{\hyperlink{test__manager_8h}{test\+\_\+manager.\+h}}\item 
+/home/fernando/code/sudoku/lib/\mbox{\hyperlink{test__manager_8cpp}{test\+\_\+manager.\+cpp}}\end{DoxyCompactItemize}

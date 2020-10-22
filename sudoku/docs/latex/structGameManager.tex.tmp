@@ -1,0 +1,343 @@
+\hypertarget{structGameManager}{}\doxysection{Game\+Manager Struct Reference}
+\label{structGameManager}\index{GameManager@{GameManager}}
+
+
+Collaboration diagram for Game\+Manager\+:
+% FIG 0
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structGameManager_a809dec58b5681fc1ebcc22eb428a914c}\label{structGameManager_a809dec58b5681fc1ebcc22eb428a914c}} 
+enum {\bfseries Game\+State} \{ \newline
+{\bfseries W\+E\+L\+C\+O\+ME} = 0, 
+{\bfseries S\+T\+A\+RT}, 
+{\bfseries P\+L\+AY}, 
+{\bfseries N\+E\+W\+\_\+\+G\+A\+ME}, 
+\newline
+{\bfseries Q\+U\+IT}, 
+{\bfseries H\+E\+LP}, 
+{\bfseries R\+E\+A\+D\+\_\+\+O\+PT}, 
+{\bfseries R\+E\+A\+D\+\_\+\+C\+MD}, 
+\newline
+{\bfseries U\+\_\+\+L\+A\+ST}, 
+{\bfseries A\+C\+T\+I\+ON}, 
+{\bfseries C\+H\+E\+CK}, 
+{\bfseries E\+N\+D\+\_\+\+G\+A\+ME}, 
+\newline
+{\bfseries Q\+U\+I\+T\+\_\+\+G\+A\+ME}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structGameManager_aef68a010d8d68ac53cfa28f8486c7501}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Setup the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structGameManager_a477eba9575ae3c4607325d48510f8513}{render}} ()
+\begin{DoxyCompactList}\small\item\em Render all the elements at he screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structGameManager_a7ecc3a14cd9e92f50729b37d1364953f}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the game state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structGameManager_acc829141481bb90ca082b5565873d875}{process\+\_\+events}} ()
+\begin{DoxyCompactList}\small\item\em Read the values. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structGameManager_aaee6c964db7985908b751f1207ae034f}{quit\+\_\+game}} ()
+\begin{DoxyCompactList}\small\item\em Quit the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structGameManager_aea56c7dce371d9cbf5869c71f024a26c}{handle\+\_\+digits\+\_\+left}} ()
+\begin{DoxyCompactList}\small\item\em Verify the digits that can be used. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structGameManager_adee0f282ea372ee173fafcce38096927}{handle\+\_\+place\+\_\+value}} ()
+\begin{DoxyCompactList}\small\item\em handle the place value \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structGameManager_a30a65fa2fbf23ac03440956dccd572a2}{handle\+\_\+check\+\_\+place\+\_\+value}} ()
+\begin{DoxyCompactList}\small\item\em checks if the value choosed is valid or not \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structGameManager_a25809217db5e42a7fc90aa2aa1c16f94}{handle\+\_\+game\+\_\+over}} ()
+\begin{DoxyCompactList}\small\item\em check if the game is over \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structGameManager_a965d6d37fa33aebd92f0b5f25d3e66e9}{handle\+\_\+number\+\_\+removal}} ()
+\begin{DoxyCompactList}\small\item\em removes a number in the board \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structGameManager_a6d306981a56aeec690afcb99251a79fb}{handle\+\_\+load\+\_\+board}} ()
+\begin{DoxyCompactList}\small\item\em loads the board \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structGameManager_ae49bab5820c576d3f0d7942701aed48b}{handle\+\_\+read\+\_\+boards}} ()
+\begin{DoxyCompactList}\small\item\em reads the file with the boards \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structGameManager_aef03595aa7c04933bcbaa2b5cb90254e}{handle\+\_\+new\+\_\+game}} ()
+\begin{DoxyCompactList}\small\item\em starts a new game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structGameManager_a35dfd060feeae97cde0b57ddd16c9428}{render\+\_\+board}} ()
+\begin{DoxyCompactList}\small\item\em renders the board \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structGameManager_afd616a7df40d64eb5c56b1b8ca2fa788}{render\+\_\+message}} ()
+\begin{DoxyCompactList}\small\item\em renders the game message \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structGameManager_a02ef814982219e656d626eacaca1de39}{render\+\_\+checks\+\_\+left}} ()
+\begin{DoxyCompactList}\small\item\em render the check lefts \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structGameManager_a37fb876ffb7953fd05c20de3cc276a20}{render\+\_\+digits\+\_\+lefts}} ()
+\begin{DoxyCompactList}\small\item\em renders the digits that the user can use \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structGameManager_a7b7b4376a84050e73fbd7f62a3c971c6}{render\+\_\+screen}} ()
+\begin{DoxyCompactList}\small\item\em Rrnders the screens. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structGameManager_aebdcadf5edbbf7aefe869a1218936063}{render\+\_\+game\+\_\+intro}} ()
+\begin{DoxyCompactList}\small\item\em renders the intro messages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structGameManager_a9d58a5bb369093eb155e970936784a01}{render\+\_\+check\+\_\+place}} (row\+\_\+t \mbox{\hyperlink{structGameManager_a7abbac8a6476f00bcea949f33d3ea3cb}{r}}, column\+\_\+t \mbox{\hyperlink{structGameManager_a56f7ce07adcd17418e4197bd1c37e0ac}{c}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structGameManager_a10b2cd67efb1b7fefed3af4524b46dc3}\label{structGameManager_a10b2cd67efb1b7fefed3af4524b46dc3}} 
+enum Game\+Manager\+::\+Game\+State {\bfseries game\+\_\+state}
+\item 
+\mbox{\Hypertarget{structGameManager_a1d4831bfed0bcd7f1f69ba652c0089b1}\label{structGameManager_a1d4831bfed0bcd7f1f69ba652c0089b1}} 
+end\+\_\+game\+\_\+t {\bfseries e} \{ false \}
+\item 
+\mbox{\Hypertarget{structGameManager_a98c4904c1467a644210001ce16808351}\label{structGameManager_a98c4904c1467a644210001ce16808351}} 
+count\+\_\+t \mbox{\hyperlink{structGameManager_a98c4904c1467a644210001ce16808351}{i}} \{0\}
+\begin{DoxyCompactList}\small\item\em board counter \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGameManager_a9c343f77ede5a537dcbb1216e2a53e33}\label{structGameManager_a9c343f77ede5a537dcbb1216e2a53e33}} 
+boards\+\_\+data\+\_\+base\+\_\+t \mbox{\hyperlink{structGameManager_a9c343f77ede5a537dcbb1216e2a53e33}{bd}}
+\begin{DoxyCompactList}\small\item\em \char`\"{}data base\char`\"{} that stores the all the boards reads in the file \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGameManager_a681b3a431ce26bdaae7677667cfd4037}\label{structGameManager_a681b3a431ce26bdaae7677667cfd4037}} 
+board\+\_\+t \mbox{\hyperlink{structGameManager_a681b3a431ce26bdaae7677667cfd4037}{b}}
+\begin{DoxyCompactList}\small\item\em main board that will stores the user play \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGameManager_ad75c6e6fbe4cb9c1f41f890b1c985ee1}\label{structGameManager_ad75c6e6fbe4cb9c1f41f890b1c985ee1}} 
+board\+\_\+t \mbox{\hyperlink{structGameManager_ad75c6e6fbe4cb9c1f41f890b1c985ee1}{b\+\_\+backup}}
+\begin{DoxyCompactList}\small\item\em board that will stores the last user play \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGameManager_ac35682f8d68013af79886cf557874e82}\label{structGameManager_ac35682f8d68013af79886cf557874e82}} 
+board\+\_\+t \mbox{\hyperlink{structGameManager_ac35682f8d68013af79886cf557874e82}{b\+\_\+check}}
+\begin{DoxyCompactList}\small\item\em board that will be compared with the main board \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGameManager_a0f3cb29d470725621001f25b164d25a3}\label{structGameManager_a0f3cb29d470725621001f25b164d25a3}} 
+file\+\_\+t \mbox{\hyperlink{structGameManager_a0f3cb29d470725621001f25b164d25a3}{f}} \{\char`\"{}../boards/input.\+txt\char`\"{}\}
+\begin{DoxyCompactList}\small\item\em default file that will be read the boards \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGameManager_a7abbac8a6476f00bcea949f33d3ea3cb}\label{structGameManager_a7abbac8a6476f00bcea949f33d3ea3cb}} 
+row\+\_\+t \mbox{\hyperlink{structGameManager_a7abbac8a6476f00bcea949f33d3ea3cb}{r}}
+\begin{DoxyCompactList}\small\item\em stores the user row choice. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGameManager_a56f7ce07adcd17418e4197bd1c37e0ac}\label{structGameManager_a56f7ce07adcd17418e4197bd1c37e0ac}} 
+column\+\_\+t \mbox{\hyperlink{structGameManager_a56f7ce07adcd17418e4197bd1c37e0ac}{c}}
+\begin{DoxyCompactList}\small\item\em stores the user column choice. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGameManager_ac0899cb46e8a50cb165d1bad2ab51d37}\label{structGameManager_ac0899cb46e8a50cb165d1bad2ab51d37}} 
+value\+\_\+t \mbox{\hyperlink{structGameManager_ac0899cb46e8a50cb165d1bad2ab51d37}{v}}
+\begin{DoxyCompactList}\small\item\em stores the user value choice. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGameManager_a5ddd3588b9ef8de75355b9719f9ea966}\label{structGameManager_a5ddd3588b9ef8de75355b9719f9ea966}} 
+commands\+\_\+t \mbox{\hyperlink{structGameManager_a5ddd3588b9ef8de75355b9719f9ea966}{cmd}}
+\begin{DoxyCompactList}\small\item\em stores the user input command. ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGameManager_a0b22fca255f271666a8835e0517c1842}\label{structGameManager_a0b22fca255f271666a8835e0517c1842}} 
+option\+\_\+t \mbox{\hyperlink{structGameManager_a0b22fca255f271666a8835e0517c1842}{o}}
+\begin{DoxyCompactList}\small\item\em stores the user input option \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGameManager_ad431cc490352f6d9c01374f21f13152b}\label{structGameManager_ad431cc490352f6d9c01374f21f13152b}} 
+std\+::string \mbox{\hyperlink{structGameManager_ad431cc490352f6d9c01374f21f13152b}{new\+\_\+g}}
+\begin{DoxyCompactList}\small\item\em stores the input new game decision \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGameManager_ac8a27307fbad38b2c0e7e250cba2cc87}\label{structGameManager_ac8a27307fbad38b2c0e7e250cba2cc87}} 
+message\+\_\+t \mbox{\hyperlink{structGameManager_ac8a27307fbad38b2c0e7e250cba2cc87}{m}}
+\begin{DoxyCompactList}\small\item\em Game messsage that will be render for the user. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGameManager_ab8288134bb9d4a3ae08d0565aa10ad36}\label{structGameManager_ab8288134bb9d4a3ae08d0565aa10ad36}} 
+digits\+\_\+t {\bfseries d} \{ 0,0,0,0,0,0,0,0,0 \}
+\item 
+\mbox{\Hypertarget{structGameManager_a33797ece2097a334899bedf5d6d0748d}\label{structGameManager_a33797ece2097a334899bedf5d6d0748d}} 
+check\+\_\+t \mbox{\hyperlink{structGameManager_a33797ece2097a334899bedf5d6d0748d}{chk}} \{ 3 \}
+\begin{DoxyCompactList}\small\item\em Checks left of the user. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGameManager_a6a00ff9c619ed8b64c30c9ffec741104}\label{structGameManager_a6a00ff9c619ed8b64c30c9ffec741104}} 
+check\+\_\+t {\bfseries check\+\_\+backup} \{ 3 \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structGameManager_a30a65fa2fbf23ac03440956dccd572a2}\label{structGameManager_a30a65fa2fbf23ac03440956dccd572a2}} 
+\index{GameManager@{GameManager}!handle\_check\_place\_value@{handle\_check\_place\_value}}
+\index{handle\_check\_place\_value@{handle\_check\_place\_value}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{handle\_check\_place\_value()}{handle\_check\_place\_value()}}
+{\footnotesize\ttfamily void Game\+Manager\+::handle\+\_\+check\+\_\+place\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+checks if the value choosed is valid or not 
+
+checking if in the row choosed there are any value equal to the value choosed
+
+if there are one don\textquotesingle{}t will be a valid choose
+
+checking if in the column choosed there are any value equal value to the value choosed
+
+if there are one don\textquotesingle{}t will be a valid choose
+
+checking the sub-\/martix 3x3 that the value was insered\mbox{\Hypertarget{structGameManager_aea56c7dce371d9cbf5869c71f024a26c}\label{structGameManager_aea56c7dce371d9cbf5869c71f024a26c}} 
+\index{GameManager@{GameManager}!handle\_digits\_left@{handle\_digits\_left}}
+\index{handle\_digits\_left@{handle\_digits\_left}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{handle\_digits\_left()}{handle\_digits\_left()}}
+{\footnotesize\ttfamily void Game\+Manager\+::handle\+\_\+digits\+\_\+left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Verify the digits that can be used. 
+
+\mbox{\Hypertarget{structGameManager_a25809217db5e42a7fc90aa2aa1c16f94}\label{structGameManager_a25809217db5e42a7fc90aa2aa1c16f94}} 
+\index{GameManager@{GameManager}!handle\_game\_over@{handle\_game\_over}}
+\index{handle\_game\_over@{handle\_game\_over}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{handle\_game\_over()}{handle\_game\_over()}}
+{\footnotesize\ttfamily void Game\+Manager\+::handle\+\_\+game\+\_\+over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+check if the game is over 
+
+pass for all the squares if any value in the board not is smaller than 0 so all the sqaures are ocuped\mbox{\Hypertarget{structGameManager_a6d306981a56aeec690afcb99251a79fb}\label{structGameManager_a6d306981a56aeec690afcb99251a79fb}} 
+\index{GameManager@{GameManager}!handle\_load\_board@{handle\_load\_board}}
+\index{handle\_load\_board@{handle\_load\_board}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{handle\_load\_board()}{handle\_load\_board()}}
+{\footnotesize\ttfamily void Game\+Manager\+::handle\+\_\+load\+\_\+board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+loads the board 
+
+\mbox{\Hypertarget{structGameManager_aef03595aa7c04933bcbaa2b5cb90254e}\label{structGameManager_aef03595aa7c04933bcbaa2b5cb90254e}} 
+\index{GameManager@{GameManager}!handle\_new\_game@{handle\_new\_game}}
+\index{handle\_new\_game@{handle\_new\_game}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{handle\_new\_game()}{handle\_new\_game()}}
+{\footnotesize\ttfamily void Game\+Manager\+::handle\+\_\+new\+\_\+game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+starts a new game. 
+
+\mbox{\Hypertarget{structGameManager_a965d6d37fa33aebd92f0b5f25d3e66e9}\label{structGameManager_a965d6d37fa33aebd92f0b5f25d3e66e9}} 
+\index{GameManager@{GameManager}!handle\_number\_removal@{handle\_number\_removal}}
+\index{handle\_number\_removal@{handle\_number\_removal}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{handle\_number\_removal()}{handle\_number\_removal()}}
+{\footnotesize\ttfamily void Game\+Manager\+::handle\+\_\+number\+\_\+removal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+removes a number in the board 
+
+\mbox{\Hypertarget{structGameManager_adee0f282ea372ee173fafcce38096927}\label{structGameManager_adee0f282ea372ee173fafcce38096927}} 
+\index{GameManager@{GameManager}!handle\_place\_value@{handle\_place\_value}}
+\index{handle\_place\_value@{handle\_place\_value}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{handle\_place\_value()}{handle\_place\_value()}}
+{\footnotesize\ttfamily void Game\+Manager\+::handle\+\_\+place\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+handle the place value 
+
+\mbox{\Hypertarget{structGameManager_ae49bab5820c576d3f0d7942701aed48b}\label{structGameManager_ae49bab5820c576d3f0d7942701aed48b}} 
+\index{GameManager@{GameManager}!handle\_read\_boards@{handle\_read\_boards}}
+\index{handle\_read\_boards@{handle\_read\_boards}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{handle\_read\_boards()}{handle\_read\_boards()}}
+{\footnotesize\ttfamily bool Game\+Manager\+::handle\+\_\+read\+\_\+boards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+reads the file with the boards 
+
+\mbox{\Hypertarget{structGameManager_aef68a010d8d68ac53cfa28f8486c7501}\label{structGameManager_aef68a010d8d68ac53cfa28f8486c7501}} 
+\index{GameManager@{GameManager}!initialize@{initialize}}
+\index{initialize@{initialize}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Game\+Manager\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Setup the game. 
+
+\mbox{\Hypertarget{structGameManager_acc829141481bb90ca082b5565873d875}\label{structGameManager_acc829141481bb90ca082b5565873d875}} 
+\index{GameManager@{GameManager}!process\_events@{process\_events}}
+\index{process\_events@{process\_events}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{process\_events()}{process\_events()}}
+{\footnotesize\ttfamily void Game\+Manager\+::process\+\_\+events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read the values. 
+
+\mbox{\Hypertarget{structGameManager_aaee6c964db7985908b751f1207ae034f}\label{structGameManager_aaee6c964db7985908b751f1207ae034f}} 
+\index{GameManager@{GameManager}!quit\_game@{quit\_game}}
+\index{quit\_game@{quit\_game}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{quit\_game()}{quit\_game()}}
+{\footnotesize\ttfamily bool Game\+Manager\+::quit\+\_\+game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Quit the game. 
+
+\mbox{\Hypertarget{structGameManager_a477eba9575ae3c4607325d48510f8513}\label{structGameManager_a477eba9575ae3c4607325d48510f8513}} 
+\index{GameManager@{GameManager}!render@{render}}
+\index{render@{render}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Game\+Manager\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Render all the elements at he screen. 
+
+\mbox{\Hypertarget{structGameManager_a35dfd060feeae97cde0b57ddd16c9428}\label{structGameManager_a35dfd060feeae97cde0b57ddd16c9428}} 
+\index{GameManager@{GameManager}!render\_board@{render\_board}}
+\index{render\_board@{render\_board}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{render\_board()}{render\_board()}}
+{\footnotesize\ttfamily void Game\+Manager\+::render\+\_\+board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+renders the board 
+
+\mbox{\Hypertarget{structGameManager_a9d58a5bb369093eb155e970936784a01}\label{structGameManager_a9d58a5bb369093eb155e970936784a01}} 
+\index{GameManager@{GameManager}!render\_check\_place@{render\_check\_place}}
+\index{render\_check\_place@{render\_check\_place}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{render\_check\_place()}{render\_check\_place()}}
+{\footnotesize\ttfamily void Game\+Manager\+::render\+\_\+check\+\_\+place (\begin{DoxyParamCaption}\item[{row\+\_\+t}]{r,  }\item[{column\+\_\+t}]{c }\end{DoxyParamCaption})}
+
+checking the sub-\/martix 3x3 that the value was insered\mbox{\Hypertarget{structGameManager_a02ef814982219e656d626eacaca1de39}\label{structGameManager_a02ef814982219e656d626eacaca1de39}} 
+\index{GameManager@{GameManager}!render\_checks\_left@{render\_checks\_left}}
+\index{render\_checks\_left@{render\_checks\_left}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{render\_checks\_left()}{render\_checks\_left()}}
+{\footnotesize\ttfamily void Game\+Manager\+::render\+\_\+checks\+\_\+left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+render the check lefts 
+
+\mbox{\Hypertarget{structGameManager_a37fb876ffb7953fd05c20de3cc276a20}\label{structGameManager_a37fb876ffb7953fd05c20de3cc276a20}} 
+\index{GameManager@{GameManager}!render\_digits\_lefts@{render\_digits\_lefts}}
+\index{render\_digits\_lefts@{render\_digits\_lefts}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{render\_digits\_lefts()}{render\_digits\_lefts()}}
+{\footnotesize\ttfamily void Game\+Manager\+::render\+\_\+digits\+\_\+lefts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+renders the digits that the user can use 
+
+\mbox{\Hypertarget{structGameManager_aebdcadf5edbbf7aefe869a1218936063}\label{structGameManager_aebdcadf5edbbf7aefe869a1218936063}} 
+\index{GameManager@{GameManager}!render\_game\_intro@{render\_game\_intro}}
+\index{render\_game\_intro@{render\_game\_intro}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{render\_game\_intro()}{render\_game\_intro()}}
+{\footnotesize\ttfamily void Game\+Manager\+::render\+\_\+game\+\_\+intro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+renders the intro messages. 
+
+\mbox{\Hypertarget{structGameManager_afd616a7df40d64eb5c56b1b8ca2fa788}\label{structGameManager_afd616a7df40d64eb5c56b1b8ca2fa788}} 
+\index{GameManager@{GameManager}!render\_message@{render\_message}}
+\index{render\_message@{render\_message}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{render\_message()}{render\_message()}}
+{\footnotesize\ttfamily void Game\+Manager\+::render\+\_\+message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+renders the game message 
+
+\mbox{\Hypertarget{structGameManager_a7b7b4376a84050e73fbd7f62a3c971c6}\label{structGameManager_a7b7b4376a84050e73fbd7f62a3c971c6}} 
+\index{GameManager@{GameManager}!render\_screen@{render\_screen}}
+\index{render\_screen@{render\_screen}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{render\_screen()}{render\_screen()}}
+{\footnotesize\ttfamily void Game\+Manager\+::render\+\_\+screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Rrnders the screens. 
+
+\mbox{\Hypertarget{structGameManager_a7ecc3a14cd9e92f50729b37d1364953f}\label{structGameManager_a7ecc3a14cd9e92f50729b37d1364953f}} 
+\index{GameManager@{GameManager}!update@{update}}
+\index{update@{update}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Game\+Manager\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the game state. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/fernando/code/sudoku/include/sudoku.\+h\item 
+/home/fernando/code/sudoku/src/sudoku.\+cpp\end{DoxyCompactItemize}

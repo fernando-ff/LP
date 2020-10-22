@@ -1,0 +1,90 @@
+\hypertarget{test__manager_8h}{}\doxysection{/home/fernando/code/sudoku/lib/test\+\_\+manager.h File Reference}
+\label{test__manager_8h}\index{/home/fernando/code/sudoku/lib/test\_manager.h@{/home/fernando/code/sudoku/lib/test\_manager.h}}
+
+
+Definition of the \mbox{\hyperlink{classTestManager}{Test\+Manager}} class.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for test\+\_\+manager.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classTestManager}{Test\+Manager}}
+\begin{DoxyCompactList}\small\item\em Implements a simple test manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{test__manager_8h_a8831425bcf8ef5fdcac03e8ae4c5b01c}\label{test__manager_8h_a8831425bcf8ef5fdcac03e8ae4c5b01c}} 
+\#define {\bfseries R\+E\+S\+U\+LT}(tm,  key,  res)~tm.\+result( key, res, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+ )
+\item 
+\mbox{\Hypertarget{test__manager_8h_aa710931052d486ba3257315f82b7c574}\label{test__manager_8h_aa710931052d486ba3257315f82b7c574}} 
+\#define {\bfseries R\+E\+G\+I\+S\+T\+ER}(tm,  key,  msg)~tm.\+record( key, msg )
+\item 
+\mbox{\Hypertarget{test__manager_8h_a563402f280002139bed7092da86ea02a}\label{test__manager_8h_a563402f280002139bed7092da86ea02a}} 
+\#define {\bfseries R\+E\+G\+I\+S\+TE}(msg)~\+\_\+tm.\+record( \+\_\+test\+\_\+id, msg )
+\item 
+\mbox{\Hypertarget{test__manager_8h_ad8cd0e69b9ee3b55cecc20fd19a35bc1}\label{test__manager_8h_ad8cd0e69b9ee3b55cecc20fd19a35bc1}} 
+\#define {\bfseries E\+X\+P\+E\+C\+T\+\_\+\+T\+R\+UE}(tm,  key,  value)~tm.\+result( key, value==true, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+ )
+\item 
+\mbox{\Hypertarget{test__manager_8h_af4b2d99d2b918e220b1ddf19816d13a3}\label{test__manager_8h_af4b2d99d2b918e220b1ddf19816d13a3}} 
+\#define {\bfseries E\+X\+P\+E\+C\+T\+\_\+\+F\+A\+L\+SE}(tm,  key,  value)~tm.\+result( key, value==false, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+ )
+\item 
+\mbox{\Hypertarget{test__manager_8h_a56d3ab0dae3c8844158e9adc7834687c}\label{test__manager_8h_a56d3ab0dae3c8844158e9adc7834687c}} 
+\#define {\bfseries E\+X\+P\+E\+C\+T\+\_\+\+EQ}(value1,  value2)~\+\_\+tm.\+result( \+\_\+test\+\_\+id, value1==value2, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+ )
+\item 
+\mbox{\Hypertarget{test__manager_8h_a7e7b4a407ba73a82525dcf232f2797d9}\label{test__manager_8h_a7e7b4a407ba73a82525dcf232f2797d9}} 
+\#define {\bfseries E\+X\+P\+E\+C\+T\+\_\+\+NE}(value1,  value2)~\+\_\+tm.\+result( \+\_\+test\+\_\+id, value1!=value2, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+ )
+\item 
+\mbox{\Hypertarget{test__manager_8h_aa147a72c818aa9c07d2f63b95df6d565}\label{test__manager_8h_aa147a72c818aa9c07d2f63b95df6d565}} 
+\#define {\bfseries E\+X\+P\+E\+C\+T\+\_\+\+GT}(value1,  value2)~\+\_\+tm.\+result( \+\_\+test\+\_\+id, value1$>$value2, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+ )
+\item 
+\mbox{\Hypertarget{test__manager_8h_a5a05a125b8d080a390387da8f35aaf02}\label{test__manager_8h_a5a05a125b8d080a390387da8f35aaf02}} 
+\#define {\bfseries E\+X\+P\+E\+C\+T\+\_\+\+GE}(value1,  value2)~\+\_\+tm.\+result( \+\_\+test\+\_\+id, value1$>$=value2, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+ )
+\item 
+\mbox{\Hypertarget{test__manager_8h_af5db522b4ee7971aca22bda53db98506}\label{test__manager_8h_af5db522b4ee7971aca22bda53db98506}} 
+\#define {\bfseries E\+X\+P\+E\+C\+T\+\_\+\+LT}(value1,  value2)~\+\_\+tm.\+result( \+\_\+test\+\_\+id, value1$<$value2, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+ )
+\item 
+\mbox{\Hypertarget{test__manager_8h_aa7164b4a51301472619adbf70951eb8d}\label{test__manager_8h_aa7164b4a51301472619adbf70951eb8d}} 
+\#define {\bfseries E\+X\+P\+E\+C\+T\+\_\+\+LE}(value1,  value2)~\+\_\+tm.\+result( \+\_\+test\+\_\+id, value1$<$=value2, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+ )
+\item 
+\mbox{\Hypertarget{test__manager_8h_a4ebc988d65dbff4952fe194282cb5306}\label{test__manager_8h_a4ebc988d65dbff4952fe194282cb5306}} 
+\#define {\bfseries D\+I\+S\+A\+B\+LE}()~\+\_\+tm.\+enable( \+\_\+test\+\_\+id, false );
+\item 
+\#define {\bfseries B\+E\+G\+I\+N\+\_\+\+T\+E\+ST}(tm,  key,  msg)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definition of the \mbox{\hyperlink{classTestManager}{Test\+Manager}} class. 
+
+\begin{DoxyDate}{Date}
+November 15th, 2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Selan R. dos Santos 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{test__manager_8h_a31b0bef75945f0e286d4a57636857a0c}\label{test__manager_8h_a31b0bef75945f0e286d4a57636857a0c}} 
+\index{test\_manager.h@{test\_manager.h}!BEGIN\_TEST@{BEGIN\_TEST}}
+\index{BEGIN\_TEST@{BEGIN\_TEST}!test\_manager.h@{test\_manager.h}}
+\doxysubsubsection{\texorpdfstring{BEGIN\_TEST}{BEGIN\_TEST}}
+{\footnotesize\ttfamily \#define B\+E\+G\+I\+N\+\_\+\+T\+E\+ST(\begin{DoxyParamCaption}\item[{}]{tm,  }\item[{}]{key,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    std::string \_test\_id\{key\}; \(\backslash\)}
+\DoxyCodeLine{    TestManager \&\_tm = tm; \(\backslash\)}
+\DoxyCodeLine{    \_tm.record( key, msg )}
+
+\end{DoxyCode}
