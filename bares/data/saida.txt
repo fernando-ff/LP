@@ -1,0 +1,88 @@
+256
+256
+32
+122
+200
+-2
+15
+-15
+5
+-5
+3
+100
+Numeric overflow error!
+18
+-17
+-4
+4
+1
+20
+0
+Division by zero!
+8
+230
+Numeric overflow error!
+300
+-43
+28
+0
+8
+12
+-50
+-28
+Integer constant out of range beginning at column (0)!
+Integer constant out of range beginning at column (12)!
+Integer constant out of range beginning at column (5)!
+Integer constant out of range beginning at column (17)!
+Ill formed integer at column (0)!
+Missing <term> at column (3)!
+Missing <term> at column (3)!
+Missing <term> at column (3)!
+Missing <term> at column (4)!
+Missing <term> at column (4)!
+Missing <term> at column (4)!
+Missing <term> at column (7)!
+Missing <term> at column (7)!
+Missing <term> at column (7)!
+Missing <term> at column (7)!
+Missing <term> at column (7)!
+Missing <term> at column (7)!
+Extraneous symbol after valid expression found at column (2)!
+Extraneous symbol after valid expression found at column (1)!
+Extraneous symbol after valid expression found at column (2)!
+Extraneous symbol after valid expression found at column (2)!
+Extraneous symbol after valid expression found at column (2)!
+Ill formed integer at column (0)!
+Ill formed integer at column (0)!
+Ill formed integer at column (0)!
+Extraneous symbol after valid expression found at column (6)!
+Extraneous symbol after valid expression found at column (6)!
+Extraneous symbol after valid expression found at column (6)!
+Extraneous symbol after valid expression found at column (6)!
+Extraneous symbol after valid expression found at column (6)!
+Extraneous symbol after valid expression found at column (10)!
+Extraneous symbol after valid expression found at column (2)!
+299
+Ill formed integer at column (0)!
+Extraneous symbol after valid expression found at column (3)!
+Ill formed integer at column (6)!
+Extraneous symbol after valid expression found at column (8)!
+Unhandled error found!
+Unhandled error found!
+Unhandled error found!
+Unhandled error found!
+Unhandled error found!
+Unhandled error found!
+Unhandled error found!
+-28
+24
+Division by zero!
+Division by zero!
+Division by zero!
+0
+Numeric overflow error!
+Numeric overflow error!
+Numeric overflow error!
+Extraneous symbol after valid expression found at column (1)!
+Unexpected end of input at column (6)!
+Unhandled error found!
